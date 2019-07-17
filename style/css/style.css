@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
+:root {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.bg-blue { background-color: #255ED0 }
+.bg-orange { background-color: #FFAB2C }
+.bg-orange:hover { background-color: #ffb649 }
+
+.m-btn {
+    border: none;
+    border-radius: 5px;
+    font-size: 12pt;
+    height: 40px;
+    width: 160px;
+}
+
+.pointer { cursor: pointer; }
+
+.d-block { display: block }
+.d-flex { display: flex }
+.d-grid { display: grid }
+
+.form {
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    outline:none;
+    padding: 5px;
+    width: 100%;
+    margin: 14px 0;
+}
+
+.flex-col { flex-direction: column }
+
+.light { font-weight: 300 }
+.bold { font-weight: 600 }
+.t-center {text-align: center;}
+.black {color: black}
+.blue {color: #255ED0}
+.white {color: white}
+.large-text { font-size: 20pt;}
+.medium-text { font-size: 14pt;}
+.small-text { font-size: 10pt; }
+
+.container {
+    width: 100%;
+    grid-template-areas:
+        "activity activity activity"
+        "graph1 graph2 graph3"
+        "table table table";
+}
+
+.activity {
+    margin-left: 50px;
+    grid-area : activity;
+}
+
+.graph1 {
+    justify-self: center;
+    grid-area : graph1;
+}
+
+.graph2 {
+    justify-self: center;
+    grid-area : graph2;
+}
+
+.graph3 {
+    justify-self: center;
+    grid-area : graph3;
+}
+
+.table-widget {
+    grid-area : table;
+    margin: 30px 0 0 20px;
+}
+
+.time-grid {
+    width: 100%;
+    min-height:20px;
+    align-items:center;
+    grid-template-areas:
+        "1 2 3";
+}
+
+.activity-widget {
+    border-left: 3px solid #255ED0;
+    margin-left: 50px;
+}
+
+.activity-list::before {
+    content: attr(time);
+    display: block;
+    position: absolute;
+    margin: 2px 0 0 -120px;
+    font-size: 10pt;
+    color: #999898;
+}
+
+.activity-list::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 10px;
+    position:absolute;
+    margin: -15px 0px 0px -46.52px;
+    border-radius: 100%;
+    background-color: #255ED0;
+}
+
+#main-content { margin-left: 220px; }
+
+#left-navbar {
+    width: 220px;
+    height: 100vw;
+}
+
+#top-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 50px;
+    width: 100%;
+    border-bottom: 2px solid #255ED0;
+}
+
+.nav-link {
+    color: white;
+    transition: .2s;
+}
+.nav-link:hover {
+    background-color: white;
+    color: #255ED0;
+}
+
+.no-style {
+    list-style: none;
+    text-decoration: none;
+}
+
+.table-title {
+    border-bottom: 2px solid #255ED0;
+    padding: 0px 20px;
+    width: 55px;
+}
+.table-leftBorder {
+    border-left: 3px solid red;
+}
+
+.center {
+    margin: 0 auto;
+    align-content: center;
+}
+.p-fix { position: fixed }
+.p-abs { position: absolute }

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>INNOVATE</title>
+    <link rel="stylesheet" href="style/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+      integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"
+      integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        id="left-navbar"
+        class="p-fix d-flex bg-blue"
+        style="flex-direction: column;"
+      >
+        <figure id="logo">
+          <img src="asset/img/cocacola.svg" width="100%;" alt="company logo" />
+        </figure>
+        <div
+          id="time"
+          class="d-grid time-grid white t-center"
+          style="margin: 9px 0px 25px"
+        >
+          <div id="date" class="item1" style="line-height: 16pt"></div>
+          <div class="item2">
+            <span
+              style="border-left:1px solid rgba(255,255,255,.5);padding:8px 0;"
+            ></span>
+          </div>
+          <div id="clock" class="item3 large-text"></div>
+        </div>
+        <a
+          id="dashboard-link"
+          class="no-style nav-link"
+          href="#"
+          style="padding:9px 0 9px 52px"
+          ><i class="fas fa-chart-bar"></i> Dashboard</a
+        >
+        <a
+          id="region-link"
+          class="no-style nav-link"
+          href="#"
+          style="padding:9px 0 9px 52px"
+          ><i class="far fa-map"></i> Region</a
+        >
+        <a
+          id="branches-link"
+          class="no-style nav-link"
+          href="#"
+          style="padding:9px 0 9px 52px"
+          ><i class="fas fa-sitemap"></i> Brances</a
+        >
+        <a
+          id="branches-link"
+          class="no-style nav-link"
+          href="#"
+          style="padding:9px 0 9px 52px"
+          ><i class="fas fa-city"></i> Facilities</a
+        >
+        <a
+          id="branches-link"
+          class="no-style nav-link"
+          href="#"
+          style="padding:9px 0 9px 52px"
+          ><i class="far fa-building"></i> Buildings</a
+        >
+        <a
+          id="branches-link"
+          class="no-style nav-link"
+          href="#"
+          style="padding:9px 0 9px 52px"
+          ><i class="far fa-user"></i> Users</a
+        >
+        <a
+          id="branches-link"
+          class="no-style nav-link"
+          href="#"
+          style="padding:9px 0 9px 52px"
+          ><i class="fas fa-desktop"></i> Devices</a
+        >
+        <br /><br /><br />
+        <button
+          type="button"
+          class="d-block center m-btn bg-orange white pointer"
+        >
+          Support
+        </button>
+      </nav>
+    </header>
+
+    <div id="main-content">
+      <nav id="top-navbar">
+        <span style="align-self: center;margin-right:10px">Hello, User</span>
+        <span style="align-self: center;margin-right:20px"
+          ><i class="fas fa-user-circle" style="font-size: 24pt;color:grey;"></i
+        ></span>
+      </nav>
+      <div class="d-grid container">
+        <div class="activity">
+          <span class="small">Recent Activity</span>
+          <ul class="activity-widget no-style">
+            <li class="activity-list" time="11.59 PM">Hai</li>
+            <li class="activity-list" time="11.00 PM">Hai</li>
+            <li class="activity-list" time="08.00 AM">Hai</li>
+            <li class="activity-list" time="07.00 AM">Hai</li>
+          </ul>
+        </div>
+        <div><canvas class="graph1" width="200"></canvas></div>
+        <div><canvas class="graph2" width="265"></canvas></div>
+        <div><canvas class="graph3"></canvas></div>
+
+          <table class="table-widget t-center">
+            <tr>
+              <th class="table-title blue">Regions</th>
+            </tr>
+            <tr>
+              <td>Health</td>
+              <td>Regions</td>
+              <td>Buildings</td>
+              <td>Machines</td>
+              <td>Recordings</td>
+            </tr>
+            <tr>
+              <td id="health" class="table-leftBorder">9.5</td>
+              <td id="region">North</td>
+              <td id="building">10</td>
+              <td id="machine">20</td>
+              <td id="recording">101</td>
+            </tr>
+
+            <tr>
+                <td id="health" class="table-leftBorder">9.5</td>
+                <td id="region">North</td>
+                <td id="building">10</td>
+                <td id="machine">20</td>
+                <td id="recording">101</td>
+            </tr>
+
+            <tr>
+                <td id="health" class="table-leftBorder">9.5</td>
+                <td id="region">North</td>
+                <td id="building">10</td>
+                <td id="machine">20</td>
+                <td id="recording">101</td>
+            </tr>
+  
+          </table>
+      </div>
+    </main>
+    
+    <script src="style/js/script.js"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        setInterval("currentTime()",100)
+        setInterval('addData(companyHealth_chart, "Lohe lohe", Math.random())', 300)
+
+        
+        // setInterval('removeData(companyHealth_chart)', 2000)
+
+      })
+    </script>
+  </body>
+</html>
