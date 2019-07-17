@@ -1,6 +1,7 @@
 const   mongoose = require('mongoose'),
         Joi = require('@hapi/joi'),
         sha256 = require('crypto-js/sha256'),
+        path = require('path'),
         sensor = mongoose.model("sensor"),
         user = mongoose.model("user")
 
@@ -26,11 +27,11 @@ const localTime = () => {
 }
 
 exports.mainPage = function(req,res) {
-    res.sendFile("index.html", {root: "/media/ky/DATA/PENS/Project/INNOVATE 2019/vSense-Web"})
+    res.sendFile(path.join(__dirname,"../") + "index.html")
 }
 
 exports.loginPage = function(req,res) {
-    res.sendFile("/views/login.html", {root: "/media/ky/DATA/PENS/Project/INNOVATE 2019/vSense-Web"})
+    res.sendFile(path.join(__dirname,"../") + "views/login.html")
 }
 
 exports.addUser = function (req,res) {
