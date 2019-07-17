@@ -26,11 +26,11 @@ const localTime = () => {
 }
 
 exports.mainPage = function(req,res) {
-    res.sendFile("index.html", {root: "/media/ky/DATA/PENS/Project/Web/vSense Web"})
+    res.sendFile("index.html", {root: "/media/ky/DATA/PENS/Project/INNOVATE 2019/vSense-Web"})
 }
 
 exports.loginPage = function(req,res) {
-    res.sendFile("/views/login.html", {root: "/media/ky/DATA/PENS/Project/Web/vSense Web"})
+    res.sendFile("/views/login.html", {root: "/media/ky/DATA/PENS/Project/INNOVATE 2019/vSense-Web"})
 }
 
 exports.addUser = function (req,res) {

@@ -6,7 +6,7 @@ const   express = require('express'),
         route = require('./router/router')
 
 mongoose.Promise = global.Promise
-mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@democluster-qsi9n.gcp.mongodb.net/sensorDB?retryWrites=true&w=majority`, { useNewUrlParser: true, useCreateIndex: true })
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@democluster-qsi9n.gcp.mongodb.net/sensorDB?retryWrites=true&w=majority`, { useNewUrlParser: true, useCreateIndex: true })
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/'))
