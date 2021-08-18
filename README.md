@@ -1,5 +1,11 @@
 # vSense-Web
 
+vSense is a real-time monitoring website to view data from sensors placed around the factory.
+
+<div align="center">
+  <img src="preview.jpg" width="600" />
+</div>
+
 >### Setting Up
 
 #### 1. Clone Repository
