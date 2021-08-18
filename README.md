@@ -2,6 +2,8 @@
 
 vSense is a real-time monitoring website to view data from sensors placed around the factory.
 
+> **NOTE:** The CocaCola company logo is used for design purpose. This project is a personal project not affiliated with any company
+
 <div align="center">
   <img src="preview.jpg" width="600" />
 </div>
